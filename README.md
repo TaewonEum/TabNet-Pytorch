@@ -56,7 +56,9 @@
         - Batch Normalization을 통해 정규화를 대체함
         
         즉 연속형(이산형)->정규화 해주고, 범주형 변수는 임베딩해주어 Feature transformer에 들어감
-        
-![image](https://user-images.githubusercontent.com/104436260/233886690-89eef217-4919-4e58-afd7-68f9cc82c64a.png)        
 
+# Feature transformer Architecture
 
+![image](https://user-images.githubusercontent.com/104436260/233886690-89eef217-4919-4e58-afd7-68f9cc82c64a.png)       
+
+        - Fully Connected-> Batch Normalization -> Gated Linear Unit를 4번 반복하는 구조임
