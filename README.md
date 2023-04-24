@@ -30,7 +30,20 @@
 
         - Step 1~N으로 나누어져있음
         
-        - 각 Step 마다 Feature transformer(변수 변환)->Attentive transformer(주어진 입력에 대해 정보를 추출)->Feature masking(노이즈제거 등)으로 구성됨
+        - 각 Step 마다 Feature transformer(변수 변환)
+        
+        - Attentive transformer(주어진 입력에 대해 정보를 추출)
+        
+        - Feature masking(불필요한 변수 제거, 즉 모델에서 사용할 변수를 선택해주는 selection 단계)으로 구성됨
+        
+        - Split block에서 Feature transformer해준 데이터를 두개로 나누어 줌
+        
+        -하나는 비선형함수에 적용하여 최종 아웃풋 data로 만들고
+        
+        - 나머지 하나는 다음 Attentive transformer로 넘겨준다.
+        
+        그 후, Feature를 selection하는 Mask block은 각 Step에서 Feature가 작동하는 것에 대한 Insight를 제공할 수 있고, 
+        Agg(regate) Block을 통해 궁극적으로는 어떤 Feature가 중요한지에 대한 것을 알 수 있습니다.
         
         
 
