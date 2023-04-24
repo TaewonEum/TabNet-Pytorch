@@ -26,7 +26,7 @@
         
 # Architecture
 
-        ![image](https://user-images.githubusercontent.com/104436260/233883575-2b54b2d8-9d6f-4643-907e-79ffeb770ad1.png)
+![image](https://user-images.githubusercontent.com/104436260/233883575-2b54b2d8-9d6f-4643-907e-79ffeb770ad1.png)
 
         - Step 1~N으로 나누어져있음
         
