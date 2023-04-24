@@ -24,6 +24,14 @@
         
         - 각 의사결정에서 어떤 feature를 사용할지를 선택함
         
+# Architecture
+
+        ![image](https://user-images.githubusercontent.com/104436260/233883575-2b54b2d8-9d6f-4643-907e-79ffeb770ad1.png)
+
+        - Step 1~N으로 나누어져있음
+        
+        - 각 Step 마다 Feature transformer(변수 변환)->Attentive transformer(주어진 입력에 대해 정보를 추출)->Feature masking(노이즈제거 등)으로 구성됨
+        
         
 
 
