@@ -46,6 +46,18 @@
         Agg(regate) Block을 통해 궁극적으로는 어떤 Feature가 중요한지에 대한 것을 알 수 있습니다.
         
         
+# Input data layer
 
+![image](https://user-images.githubusercontent.com/104436260/233886690-89eef217-4919-4e58-afd7-68f9cc82c64a.png)
+
+        - 기본적으로 정형 데이터는 수치형 변수로 이루어져 있을 것이다. 그 중 연속형(이산형) 변수, 범주형 변수로 이루어져 있을 것 이다.
+        
+        범주형 변수 즉(0,1,2,3,4,5)와 같이 코딩이 되어있는 변수들은 One-hot encoding으로 처리를 해주어야 딥러닝 모델에 적용시킬 수 있다.
+        
+        - Batch Normalization을 통해 정규화를 대체함
+        
+        즉 연속형(이산형)->정규화 해주고, 범주형 변수는 임베딩해주어 Feature transformer에 들어감
+        
+        
 
 
