@@ -48,7 +48,6 @@
         
 # Input data layer
 
-![image](https://user-images.githubusercontent.com/104436260/233886690-89eef217-4919-4e58-afd7-68f9cc82c64a.png)
 
         - 기본적으로 정형 데이터는 수치형 변수로 이루어져 있을 것이다. 그 중 연속형(이산형) 변수, 범주형 변수로 이루어져 있을 것 이다.
         
@@ -58,6 +57,6 @@
         
         즉 연속형(이산형)->정규화 해주고, 범주형 변수는 임베딩해주어 Feature transformer에 들어감
         
-        
+![image](https://user-images.githubusercontent.com/104436260/233886690-89eef217-4919-4e58-afd7-68f9cc82c64a.png)        
 
 
