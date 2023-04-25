@@ -62,16 +62,15 @@
 ![image](https://user-images.githubusercontent.com/104436260/233886690-89eef217-4919-4e58-afd7-68f9cc82c64a.png)       
 
         -Feature Transformer layer가 수행하는 활동은 입력데이터에 대한 전처리(표준화, 정규화)
-        -중요변수 선택(중요한 변수만 선택, 이를 위해 Split block으로 나누어 중요변수 선택)
-        -Gated Linear Unit(출력된 변수에 대해, 필요한 정보만 선택 이를 통해 입력데이터에서 불필요한 정보 제거하고 모델의 예측 성능 향상)
+        - Batch Normalization-> 각 컬럼에 대한 정규화 진행
+        -Gated Linear Unit(원래 정보를 유지하기 위한 Resudual connection과 
+        Sigmoid함수를 통해 선택적으로 유의미한 정보 추출하여 둘을 곱함)=>이게 output임
 
         - Fully Connected-> Batch Normalization -> Gated Linear Unit를 4번 반복하는 구조임
         
         - 기본적으로 이미지 딥러닝에서 Fully Connected는 다차원의 텐서 데이터를 일차원 벡터형태로 변환해주는 층임
         하지만 정형데이터에서는 각 컬럼이 하나의 차원에 해당됨. 이 차원을 줄이거나 유지하여 모델에 적용시켜주는 기능을 FC가 수행함
-        
-        - Batch Normalization-> 각 컬럼에 대한 정규화 진행
-        
+         
         - Gated Linear Unit-> 입력 데이터의 정보를 필요한 부분만 선택적으로 전달하기 위한 기능을 수행하는 층
         중요한 정보만을 선택하고자 할때 활용->회귀분석의 Stepwise, backward와 같은 변수선택이라고 보면 될 것 같음
         
