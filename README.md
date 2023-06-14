@@ -82,8 +82,9 @@ Encoder가 출력한 각 특성의 중요도를 계산하고 이를 기반으로
 
 이를 통해 중요한 변수만을 학습할 수 있게 된다.
 
-abNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Decision Masking이 핵심적으로 사용됩니다. 
+TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Decision Masking이 핵심적으로 사용됩니다. 
 
 처음에는 unsupervised learning을 통해 데이터의 복잡한 패턴을 학습하고, 그 다음에는 이를 fine-tune하여 특정 예측 작업을 수행하도록 학습합니다. 
 
 이 과정에서 Encoder와 Decision Masking은 데이터의 중요한 특성을 선택하고, 이를 바탕으로 예측을 수행하는 핵심적인 역할을 수행합니다.
+
