@@ -63,3 +63,27 @@ Encoder에서는 일부 변수만 선택하여 처리합니다. 이를 통해 �
 TabNet Decoder 에서는 Encoder가 생성한 잠재 표현을 받아 최종 예측값을 생성함. 
 
 즉 Encoder에서 입력데이터 처리->중요변수 선택->복잡한 패턴 학습->학습된 정보 Decoder로 이동->최종 예측값 출력
+
+## Tabnet supervised
+
+![image](https://github.com/eumtaewon/TabNet-Pytorch/assets/104436260/6c426888-2c9a-4bb3-b948-ca6c60c8e855)
+
+TabNet은 먼저 자기 지도 학습을 통해 테이블 데이터의 복잡한 패턴을 학습하고, 
+
+이를 바탕으로 예측 작업을 수행하여 감독 학습의 성능을 향상시키는 방식을 채택하고 있습니다.
+
+Tabnet Encoder 부분은 Unsupervised pre training과 같다
+
+Decision Masking은 TabNet의 또 다른 핵심 요소로 입력 특성의 어떤 부분이 예측에 중요한지를 결정한다.
+
+Encoder가 출력한 각 특성의 중요도를 계산하고 이를 기반으로 중요한 특성을 선택한다.
+
+이렇게 선택된 특성들만이 다음 Decision Step으로 전달되고 나머지 특성들은 제외된다.
+
+이를 통해 중요한 변수만을 학습할 수 있게 된다.
+
+abNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Decision Masking이 핵심적으로 사용됩니다. 
+
+처음에는 unsupervised learning을 통해 데이터의 복잡한 패턴을 학습하고, 그 다음에는 이를 fine-tune하여 특정 예측 작업을 수행하도록 학습합니다. 
+
+이 과정에서 Encoder와 Decision Masking은 데이터의 중요한 특성을 선택하고, 이를 바탕으로 예측을 수행하는 핵심적인 역할을 수행합니다.
