@@ -96,7 +96,7 @@ TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Dec
 
 - TabNet encoder는 feature transformer, attentive transformer, feature masking으로 구성되어 있음
 
-- Feature transformer는 입력 특성을 처리하고 변형한다->비선형적 변환
+- Feature transformer는 입력 특성을 처리하고 변형한다->입력데이터 Fully connected->Batch Normalization->activation function->비선형화->복잡한 패턴과 숨겨진 비선형 관계 학습 가능
 
 - Attentive transformer는 어떠한 변수가 중요한지를 결정하는 역할을 함, 모델은 각 단계에서 중요한 변수에 가중치를 줘서 더 많은 학습을 하게 하고 중요하지 않은 변수는 가중치를 적게주어 학습이 더 안되게 함
 
