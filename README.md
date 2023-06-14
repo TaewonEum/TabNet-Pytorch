@@ -112,3 +112,24 @@ TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Dec
 
 - 해당 디코더는 데이터값이 아예 없는 비지도 학습 파트에만 사용된다
 
+## (c) Attentive Transformer
+
+- 모델이 어떤 변수를 이용할 것인지를 결정하는 중요한 역할을 담당함
+
+입력 변수들 중에서 가장 중요하다고 판단되는 피처들을 선택하는 역할을 함
+
+이러한 선택으로 모델의 해석 가능성을 높이고, 불필요한 변수에 대한 학습을 줄임
+
+해당 Transformer에서는 전체 변수 세트에 대한 attention score를 계산한다
+
+attention score란 각 변수가 얼마나 중요한지를 나타내는 score
+
+해당 score는 주어진 decision step에서 각 변수가 얼마나 이전에 사용되었는지를 고려한 prior scale 정보와 함께 modulated 된다
+
+이전에 많이 사용된 변수의 경우 prior scale 값이 증가한다. 이에따라 attention score는 낮아져 변수의 중요도가 하락한다.
+
+즉 이전에 많이 사용된 변수들은 후속 decision step에서 덜 중요하게 처리되도록 함.
+
+이로써, 모든 변수에 대해 고르게 집중하여 과적합이 되는것을 방지하여 모델이 robust하도록 기여함
+
+
