@@ -88,3 +88,6 @@ TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Dec
 
 이 과정에서 Encoder와 Decision Masking은 데이터의 중요한 특성을 선택하고, 이를 바탕으로 예측을 수행하는 핵심적인 역할을 수행합니다.
 
+# TabNet Network
+
+![image](https://github.com/eumtaewon/TabNet-Pytorch/assets/104436260/f31c5448-f712-4685-bee5-3419be173bb7)
