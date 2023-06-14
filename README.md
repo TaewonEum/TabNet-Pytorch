@@ -100,5 +100,5 @@ TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Dec
 
 - Attentive transformer는 어떠한 변수가 중요한지를 결정하는 역할을 함, 모델은 각 단계에서 중요한 변수에 가중치를 줘서 더 많은 학습을 하게 하고 중요하지 않은 변수는 가중치를 적게주어 학습이 더 안되게 함
 
-- feature masking에서는 Attentive transformer에 정보를 이어받아 중요한 변수를 선택하고 중요하지 않은 변수를 제외하여
+- feature masking에서는 특정 변수를 선택하거나 선택하지 않는 방식으로 작동함. 모델이 특정 변수에 지나치게 과적합되어 있다면 해당 변수를 마스킹 처리하여 나머지 변수로 모델을 학습하여 모델의 일반화 성능을 향상시킴
 
