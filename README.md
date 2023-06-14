@@ -91,3 +91,14 @@ TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Dec
 # TabNet Network
 
 ![image](https://github.com/eumtaewon/TabNet-Pytorch/assets/104436260/f31c5448-f712-4685-bee5-3419be173bb7)
+
+## (a) TabNet encoder
+
+- TabNet encoder는 feature transformer, attentive transformer, feature masking으로 구성되어 있음
+
+- Feature transformer는 입력 특성을 처리하고 변형한다->비선형적 변환
+
+- Attentive transformer는 어떠한 변수가 중요한지를 결정하는 역할을 함, 모델은 각 단계에서 중요한 변수에 가중치를 줘서 더 많은 학습을 하게 하고 중요하지 않은 변수는 가중치를 적게주어 학습이 더 안되게 함
+
+- feature masking에서는 Attentive transformer에 정보를 이어받아 중요한 변수를 선택하고 중요하지 않은 변수를 제외하여
+
