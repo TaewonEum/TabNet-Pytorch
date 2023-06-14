@@ -102,3 +102,13 @@ TabNet의 supervised fine-tuning 과정에서는 이러한 TabNet Encoder와 Dec
 
 - feature masking에서는 특정 변수를 선택하거나 선택하지 않는 방식으로 작동함. 모델이 특정 변수에 지나치게 과적합되어 있다면 해당 변수를 마스킹 처리하여 나머지 변수로 모델을 학습하여 모델의 일반화 성능을 향상시킴
 
+## (b) TabNet decoder
+
+- Encoded representation: Encoder를 통해 얻어진 원본 데이터에서 중요한 정보만을 추출한 데이터
+
+- Decoder는 해당 Encoded representation을 원래 차원으로 되돌리는 과정 즉, 원본데이터를 되돌리는 과정을 담당한다.
+
+- 각 단계에서 Feature transformer와 fully connected를 통해 데이터를 처리하고 그 결과를 한 스탭이 지날때마다 더해준다.
+
+- 해당 디코더는 데이터값이 아예 없는 비지도 학습 파트에만 사용된다
+
